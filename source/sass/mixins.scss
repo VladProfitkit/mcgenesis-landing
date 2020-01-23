@@ -29,3 +29,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin fancy-font {
+  font-family: "Neucha", sans-serif;
+  // letter-spacing: .02em;
+  text-transform: uppercase;
+  color: #000;
+}

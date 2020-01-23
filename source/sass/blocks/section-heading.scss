@@ -1,0 +1,29 @@
+.section-heading {
+  @include reset;
+  @include fancy-font;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 35px;
+  line-height: 35px;
+
+  &--center {
+    text-align: center;
+  }
+
+  &--smaller {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .section-heading {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 45px;
+    line-height: 40px;
+
+    &--smaller {
+      font-size: 30px;
+    }
+  }
+}

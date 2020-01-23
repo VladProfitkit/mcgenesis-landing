@@ -1,0 +1,132 @@
+.about-us {
+  position: relative;
+  margin-top: 70px;
+  margin-bottom: 45px;
+  padding-top: 56px;
+  padding-bottom: 50px;
+  background-color: $main-color;
+  z-index: 1;
+
+  &::before {
+    content: "4444444";
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 110%;
+    margin-left: -1%;
+    font-size: 140px;
+    letter-spacing: -30px;
+    font-family: "Icons";
+    line-height: 1;
+    color: $main-color;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "4444444";
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 110%;
+    margin-left: -1%;
+    font-size: 140px;
+    font-family: "Icons";
+    line-height: 1;
+    letter-spacing: -30px;
+    color: $main-color;
+    overflow: hidden;
+    z-index: -1;
+  }
+}
+
+.about-us__heading {
+  margin-bottom: 22px;
+}
+
+.about-us__subheading {
+  @include reset;
+  margin-bottom: 55px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: .015em;
+  text-align: center;
+}
+
+.about-us__features {
+  @include d-flex(wrap, row, space-between, flex-start);
+  margin-bottom: 59px;
+  padding: 0 100px;
+}
+
+.about-us__feature-item {
+  @include d-flex(nowrap, column, flex-start, center);
+}
+
+.about-us__feature-heading {
+  @include reset;
+  @include fancy-font;
+  min-height: 85px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  line-height: 27px;
+  color: $darker-main-color;
+
+  &--big {
+    display: inline-block;
+    min-height: 0;
+    margin-bottom: 6px;
+    font-size: 55px;
+    line-height: 34;
+    line-height: 1;
+  }
+
+  &--first {
+    max-width: 70px;
+  }
+
+  &--second {
+    max-width: 135px;
+  }
+
+  &--third {
+    max-width: 130px;
+  }
+
+  &--fourth {
+    max-width: 225px;
+  }
+}
+
+.about-us__feature-description {
+  @include reset;
+  hyphens: auto;
+
+  &--first {
+    max-width: 140px;
+  }
+
+  &--second {
+    max-width: 205px;
+  }
+
+  &--third {
+    max-width: 200px;
+  }
+
+  &--fourth {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about-us__features {
+
+  }
+
+  .about-us__feature-item {
+    max-width: 225px;
+    text-align: center;
+  }
+}

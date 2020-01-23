@@ -44,20 +44,24 @@ a {
   clip: rect(0 0 0 0);
 }
 
-.container {
+.wrapper {
   max-width: 100%;
   padding-right: 0;
   padding-left: 0;
 }
 
 @media (min-width: $tablet-width) {
-  .container {
+  .wrapper {
     max-width: 738px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .container {
+  .wrapper {
     max-width: 1280px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 }
