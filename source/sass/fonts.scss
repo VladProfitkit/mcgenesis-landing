@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Neucha';
+    src: url('../fonts/NeuchaRegular.eot') format('embedded-opentype'),
+         url('../fonts/NeuchaRegular.ttf') format('truetype'),
+         url('../fonts/NeuchaRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../fonts/Calibri.eot') format('embedded-opentype'),
+         url('../fonts/Calibri.ttf') format('truetype'),
+         url('../fonts/Calibri.svg') format('svg'),
+         url('../fonts/Calibri.woff') format('woff'),
+         url('../fonts/Calibri.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Icons';
+    src: url('../fonts/Icons.ttf') format('truetype'),
+         url('../fonts/Icons.svg') format('svg'),
+         url('../fonts/Icons.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
