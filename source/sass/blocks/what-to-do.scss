@@ -1,6 +1,7 @@
 .what-to-do {
   position: relative;
   padding-top: 90px;
+  padding-bottom: 30px;
 
   &::before {
     @include abs-pseudo;
@@ -184,6 +185,7 @@
 
 .what-to-do__button-wrapper {
   margin-top: 110px;
+  margin-bottom: 0;
 }
 
 @media (min-width: $tablet-width) {
