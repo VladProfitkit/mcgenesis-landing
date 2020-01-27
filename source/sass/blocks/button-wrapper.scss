@@ -1,21 +1,35 @@
 .button-wrapper {
-  @include d-flex(row, wrap, center, center);
+  @include d-flex(nowrap, column, flex-start, center);
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .button-wrapper__heading {
+  @include reset;
   @include fancy-font;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.button-wrapper__arrow {
+    transform: rotate(82deg);
 }
 
 .button-wrapper--consultation .button-wrapper__arrow {
-  margin: 0 28px;
+  margin: 40px 28px 45px;
 }
 
 .button-wrapper--question .button-wrapper__arrow {
-  margin: 0 10px;
+  margin: 40px 10px 45px;
 }
 
 .button-wrapper__button {
   @include d-flex(nowrap, row, center, center);
+  min-height: 45px;
+  font-size: 14px;
+  line-height: 20px;
   color: #fff;
   font-weight: bold;
   letter-spacing: .05em;
@@ -28,19 +42,15 @@
 
 @media (min-width: $tablet-width) {
   .button-wrapper {
-    width: 100%;
+    @include d-flex(nowrap, row, center, center);
   }
 
   .button-wrapper__heading {
-    font-size: 30px;
-    line-height: 40px;
+    text-align: right;
+    font-size: 21px;
   }
 
   .button-wrapper__button {
-    min-height: 45px;
-    font-size: 14px;
-    line-height: 20px;
-
     &--consultation {
       min-width: 272px;
     }
@@ -48,5 +58,17 @@
     &--question {
       min-width: 208px;
     }
+  }
+
+  .button-wrapper__arrow {
+    margin-top: 0;
+    margin-bottom: 0;
+    transform: rotate(0);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button-wrapper__heading {
+    font-size: 30px;
   }
 }

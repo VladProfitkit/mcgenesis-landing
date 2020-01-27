@@ -8,7 +8,7 @@
   z-index: 1;
 
   &::before {
-    content: "4444444";
+    content: "444444444444";
     position: absolute;
     top: -60px;
     left: 0;
@@ -24,7 +24,7 @@
   }
 
   &::after {
-    content: "4444444";
+    content: "444444444444";
     position: absolute;
     bottom: -40px;
     left: 0;
@@ -41,15 +41,15 @@
 }
 
 .about-us__heading {
-  margin-bottom: 22px;
+  margin-bottom: 30px;
 }
 
 .about-us__subheading {
   @include reset;
-  margin-bottom: 55px;
+  margin-bottom: 35px;
   font-weight: normal;
   font-size: 20px;
-  line-height: 40px;
+  line-height: 30px;
   letter-spacing: .015em;
   text-align: center;
 }
@@ -57,20 +57,27 @@
 .about-us__features {
   @include d-flex(wrap, row, space-between, flex-start);
   margin-bottom: 59px;
-  padding: 0 100px;
+  padding: 0;
 }
 
 .about-us__feature-item {
-  @include d-flex(nowrap, column, flex-start, center);
+  @include d-flex(nowrap, row, space-between, flex-start);
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 .about-us__feature-heading {
   @include reset;
   @include fancy-font;
+  @include d-flex(nowrap, column, flex-start, center);
+  flex-basis: 45%;
+  flex-shrink: 0;
   min-height: 85px;
   margin-bottom: 15px;
+  padding-right: 5px;
   font-size: 24px;
   line-height: 27px;
+  text-align: center;
   color: $darker-main-color;
 
   &--big {
@@ -81,52 +88,78 @@
     line-height: 34;
     line-height: 1;
   }
-
-  &--first {
-    max-width: 70px;
-  }
-
-  &--second {
-    max-width: 135px;
-  }
-
-  &--third {
-    max-width: 130px;
-  }
-
-  &--fourth {
-    max-width: 225px;
-  }
 }
 
 .about-us__feature-description {
   @include reset;
+  flex-basis: 55%;
   hyphens: auto;
-
-  &--first {
-    max-width: 140px;
-  }
-
-  &--second {
-    max-width: 205px;
-  }
-
-  &--third {
-    max-width: 200px;
-  }
-
-  &--fourth {
-    max-width: 200px;
-  }
 }
 
 @media (min-width: $tablet-width) {
-  .about-us__features {
+  .about-us__heading {
+    margin-bottom: 22px;
+  }
 
+  .about-us__subheading {
+    margin-bottom: 55px;
+    line-height: 40px;
+  }
+
+  .about-us__features {
+    padding: 0 100px;
   }
 
   .about-us__feature-item {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     max-width: 225px;
     text-align: center;
+  }
+
+  .about-us__feature-heading {
+    display: inline;
+    padding-right: 0;
+
+    &--first {
+      max-width: 70px;
+    }
+
+    &--second {
+      max-width: 135px;
+    }
+
+    &--third {
+      max-width: 130px;
+    }
+
+    &--fourth {
+      max-width: 225px;
+    }
+  }
+
+  .about-us__feature-description {
+    &--first {
+      max-width: 140px;
+    }
+
+    &--second {
+      max-width: 205px;
+    }
+
+    &--third {
+      max-width: 200px;
+    }
+
+    &--fourth {
+      max-width: 200px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us__feature-item {
+    margin-bottom: 0;
   }
 }

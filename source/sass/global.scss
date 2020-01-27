@@ -45,9 +45,10 @@ a {
 }
 
 .wrapper {
-  max-width: 100%;
-  padding-right: 0;
-  padding-left: 0;
+  max-width: 320px;
+  margin: 0 auto;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 @media (min-width: $tablet-width) {
