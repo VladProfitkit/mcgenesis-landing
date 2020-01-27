@@ -1,0 +1,49 @@
+.infertility {
+  padding-top: 92px;
+  padding-bottom: 75px;
+}
+
+.infertility__heading {
+  margin-bottom: 85px;
+}
+
+.infertility__item-heading {
+  @include reset;
+  @include fancy-font;
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.infertility__item-description {
+  @include reset;
+  margin-bottom: 30px;
+  hyphens: auto;
+
+  &--nowrap {
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .infertility {
+    padding-bottom: 450px;
+    background-image: url("../img/image-couple.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center bottom 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .infertility {
+    padding-bottom: 75px;
+    // background-position: center 78px top 234px;
+    background-position-x: calc(50% + 397px);
+    background-position-y: top 234px;
+  }
+
+  .infertility__item-description {
+    max-width: 710px;
+  }
+}
