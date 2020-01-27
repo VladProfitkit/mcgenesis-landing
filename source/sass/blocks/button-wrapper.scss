@@ -27,6 +27,7 @@
 
 .button-wrapper__button {
   @include d-flex(nowrap, row, center, center);
+  min-width: 210px;
   min-height: 45px;
   font-size: 14px;
   line-height: 20px;

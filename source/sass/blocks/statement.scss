@@ -1,0 +1,59 @@
+.statement {
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 35px;
+  padding-top: 65px;
+  padding-bottom: 55px;
+  background-color: $main-color;
+
+  &::before {
+    content: "444444444444";
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 110%;
+    margin-left: -1%;
+    font-size: 140px;
+    letter-spacing: -30px;
+    font-family: "Icons";
+    line-height: 1;
+    color: $main-color;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "444444444444";
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 110%;
+    margin-left: -1%;
+    font-size: 140px;
+    font-family: "Icons";
+    line-height: 1;
+    letter-spacing: -30px;
+    color: $main-color;
+    overflow: hidden;
+    z-index: -1;
+  }
+}
+
+.statement__heading {
+  @include reset;
+  @include fancy-font;
+  text-align: center;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: none;
+}
+
+.statement__heading span {
+  vertical-align: sub;
+}
+
+@media (min-width: $desktop-width) {
+  .statement__heading br {
+    display: none;
+  }
+}
