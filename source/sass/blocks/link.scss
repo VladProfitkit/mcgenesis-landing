@@ -1,0 +1,12 @@
+.link {
+  font-weight: bold;
+  color: $extra-color;
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: 0.015em;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}

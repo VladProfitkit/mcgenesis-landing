@@ -73,7 +73,7 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      transform: rotate(90deg);
+      transform: rotate(90deg) scaleY(-1);
     }
   }
 
