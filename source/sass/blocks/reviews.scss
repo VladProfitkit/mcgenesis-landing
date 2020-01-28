@@ -3,3 +3,55 @@
   font-size: 30px;
   line-height: 40px;
 }
+
+.reviews__description {
+  @include reset;
+}
+
+.reviews__item {
+  margin-top: 42px;
+
+  &:first-of-type {
+    margin-top: 35px;
+  }
+}
+
+.reviews__item-header {
+  @include d-flex(nowrap, row, space-between, flex-end);
+}
+
+.reviews__item-name {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.reviews__item-date {
+  line-height: 40px;
+}
+
+.reviews__item-content {
+  @include reset;
+  // margin-top: 40px;
+  padding: 42px 15px 0 15px;
+  hyphens: auto;
+}
+
+.reviews__link-all {
+  display: inline-block;
+  margin-top: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews__item-content {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews__item-content {
+    padding-right: 80px;
+  }
+}

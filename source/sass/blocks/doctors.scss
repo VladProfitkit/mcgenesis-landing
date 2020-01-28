@@ -1,0 +1,114 @@
+.doctors {
+  position: relative;
+  margin-top: 54px;
+  margin-bottom: 52px;
+  padding-top: 70px;
+  padding-bottom: 50px;
+
+  background-color: $main-color;
+
+  &::before {
+    content: "444444444444";
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 110%;
+    margin-left: -1%;
+    font-size: 140px;
+    letter-spacing: -30px;
+    font-family: "Icons";
+    line-height: 1;
+    color: $main-color;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "444444444444";
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 110%;
+    margin-left: -1%;
+    font-size: 140px;
+    font-family: "Icons";
+    line-height: 1;
+    letter-spacing: -30px;
+    color: $main-color;
+    overflow: hidden;
+    z-index: -1;
+  }
+}
+
+.doctors__heading {
+  margin-bottom: 57px;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.doctors__wrapper {
+  @include d-flex(wrap, column, flex-start, center);
+}
+
+.doctors__doc {
+  @include d-flex(nowrap, column, flex-start, center);
+  margin-bottom: 45px;
+}
+
+.doctors__doc-photo {
+  margin-right: 25px;
+}
+
+.doctors__doc-info {
+  @include reset;
+  @include d-flex(nowrap, column, flex-start, center);
+  width: 285px;
+}
+
+.doctors__doc-name {
+  @include fancy-font;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.doctors__doc-position {
+  position: relative;
+  padding-left: 8px;
+
+  &::before {
+    position: absolute;
+    content: "-";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .doctors__wrapper {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .doctors__doc {
+    flex-direction: row;
+  }
+
+  .doctors__doc-info {
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .doctors__wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 135px;
+  }
+
+  .doctors__doc {
+    &:nth-of-type(odd) {
+      margin-right: 165px;
+    }
+  }
+}
